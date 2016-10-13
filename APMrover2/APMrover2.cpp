@@ -295,6 +295,8 @@ void Rover::one_second_loop(void)
     // allow orientation change at runtime to aid config
     ahrs.set_orientation();
 
+    gcs_send_text_fmt( MAV_SEVERITY_INFO, "Brian rocks");
+
     set_control_channels();
 
     // cope with changes to aux functions
